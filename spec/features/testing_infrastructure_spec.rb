@@ -19,4 +19,9 @@
      click_button('Attack')
      expect(page).to have_content "Jennifer attacks Canard!"
    end
+   scenario "Player 2 gets attacked and loses 10HP" do
+     sign_in_and_play
+     click_button('Attack')
+     expect(page).to have_content "Canard: 40HP"
+   end
  end
