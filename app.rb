@@ -32,7 +32,7 @@ class Battle < Sinatra::Base
     end
 
     post '/reduce_hit_points' do
-      $player_2.reduce_hit_points
+      $player_1.attack($player_2)
       redirect '/attack'
     end
 
