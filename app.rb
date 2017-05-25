@@ -16,6 +16,7 @@ class Battle < Sinatra::Base
     end
 
     get '/play' do
+      $game.increase_turn_by_one
       @game = $game
       erb :play
     end

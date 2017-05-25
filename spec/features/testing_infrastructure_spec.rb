@@ -25,3 +25,13 @@
      expect(page).to have_content "Canard: 40HP"
    end
  end
+
+ feature "Switching turns" do
+   scenario "Alternates between players after each attack" do
+     sign_in_and_play
+     click_button('Attack')
+     click_button('OK')
+     click_button('Attack')
+     expect(page).to have_content "Jennifer: 40HP"
+   end
+ end
