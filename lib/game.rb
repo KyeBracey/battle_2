@@ -8,7 +8,7 @@ class Game
     @turn = 0
   end
 
-  def attack(player)
+  def attack
     @turn.even? ? @player_1.reduce_hit_points : @player_2.reduce_hit_points
   end
 

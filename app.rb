@@ -26,8 +26,8 @@ class Battle < Sinatra::Base
       erb :attack
     end
 
-    post '/reduce_hit_points' do
-      $game.attack($game.player_2)
+    get '/reduce_hit_points' do
+      $game.attack
       redirect '/attack'
     end
 
